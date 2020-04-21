@@ -32,6 +32,7 @@ def mouse_mover():
         time.sleep(IDLE_DURATION)
         if initial_cursor_position == pyautogui.position():
             print("Forward movement made at " + str(datetime.now().time()))
+            pyautogui.press('shift')
             pyautogui.move(MOVEMENT_X, MOVEMENT_Y)
             time.sleep(5)
             pyautogui.move(-MOVEMENT_X, -MOVEMENT_Y)
